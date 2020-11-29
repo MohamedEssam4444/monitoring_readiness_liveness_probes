@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    test: liveness
+  name: liveness-exec
+spec:
+  containers:
+  - name: liveness
+    image: k8s.gcr.io/busybox
+    args:
+    - /bin/sh
+    - -c
+    - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600 #create a file called healthy in tmp dir and terminate it after 30 seconds
+    livenessProbe: #check that file we created exist or not (means check if pod wis working properly)
+      exec:
+        command:
+        - cat
+        - /tmp/healthy #view contents of that file 
+      initialDelaySeconds: 5 #wait 5 seconds and start the test
+      periodSeconds: 5 #test each 5 seconds
