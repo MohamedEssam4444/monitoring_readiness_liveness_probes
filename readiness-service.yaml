@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: readiness-svc
+spec:
+  type: LoadBalancer
+  selector:
+    app: readiness-test
+  ports:
+  - protocol: TCP
+    port: 80 # service port recieving connections and mapping it to the pod port
+    targetPort: 8080 # pod port
