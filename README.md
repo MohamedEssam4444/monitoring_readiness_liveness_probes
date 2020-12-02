@@ -27,10 +27,15 @@ deploy readiness and liveness probes to monitor pods
 
 ### proven steps: 
 1. create cluster:
+
 ![Screenshot from 2020-11-14 12-54-25](https://user-images.githubusercontent.com/68178003/100541479-ea9d1b00-324c-11eb-89a2-58ed494ef1d9.png)
+
 2. showing readiness service in gcp :
+
 ![Screenshot from 2020-11-14 12-54-43](https://user-images.githubusercontent.com/68178003/100541480-ed980b80-324c-11eb-9b90-d51f6284bd41.png)
 
 ![Screenshot from 2020-11-14 12-55-13](https://user-images.githubusercontent.com/68178003/100541484-f12b9280-324c-11eb-9a3d-a4941fdb0b77.png)
+
 3. deployment : 
+
 ![Screenshot from 2020-11-14 12-57-09](https://user-images.githubusercontent.com/68178003/100541488-f38dec80-324c-11eb-893c-bb7325689490.png)
